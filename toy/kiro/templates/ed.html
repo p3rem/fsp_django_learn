@@ -1,0 +1,16 @@
+<html><body>
+    <form action="{% url 'student_update' s.id %}">
+        <input type="text" name ='b1' value="{{ s.first_name }}">
+        <input type="text" name ='b2' value="{{ s.last_name }}">
+        <input type="text" name ='b3' value="{{ s.address }}">
+        <input type="text" name ='b4' value="{{ s.pincode }}">
+        <input type="text" name ='b5' value="{{ s.city }}">
+        <input type="text" name ='b6' value="{{ s.state }}">
+        <input type="text" name ='b7' value="{{ s.father_name }}">
+        <input type="text" name ='b8' value="{{ s.mother_name }}">
+        <input type="text" name ='b9' value="{{ s.phno }}">
+        <input type="text" name ='b10' value="{{ s.emailid }}">
+        <input type="text" name ='b11' value="{{ s.adhaar_no }}">
+        <input type="submit" value="Update">
+    </form>
+</body></html>

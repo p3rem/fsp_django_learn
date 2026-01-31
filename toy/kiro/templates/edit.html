@@ -1,0 +1,10 @@
+<html><body>
+    <form action="{% url 'user_update' u.id %}">
+        <input type="text" name ='a1' value="{{ u.name }}">
+        <input type="text" name ='a2' value="{{ u.email }}">
+        <input type="text" name ='a3' value="{{ u.password }}">
+        <input type="text" name ='a4' value="{{ u.phno }}">
+        <input type="text" name ='a5' value="{{ u.age }}">
+        <input type="submit" value="Update">
+    </form>
+</body></html>

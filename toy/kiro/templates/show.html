@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+    <body>
+        <table>
+            <tr><td>Name</td><td>Email</td><td>Password</td><td>Phone</td><td>Age</td></tr>
+            {% for i in u %}
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.password }}</td>
+                <td>{{ i.phno }}</td>
+                <td>{{ i.age }}</td>
+                <td><a href="delta/{{i.id}}">Delete</a></td>
+                <td><a href="edit/{{i.id}}">Edit</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        {{request.session.aec.name}}
+    </body>
+</html>

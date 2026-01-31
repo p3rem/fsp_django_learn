@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+
+<body>
+    <form action="calculator" method="get">
+        <input type="text" name="a1">
+        <input type="text" name="a2">
+        <input type="submit" name="operation" value="addc">
+        <input type="submit" name="operation" value="subtractc">
+        <input type="submit" name="operation" value="multiplyc">
+        <input type="submit" name="operation" value="dividec">
+    </form>
+    {% if result != None %}
+    <h1>Result: {{ result }}</h1>
+    {% endif %}
+</body>
+
+</html>

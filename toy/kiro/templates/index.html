@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% if email %}
+            <li><strong>Welcome, {{ email }}</strong></li>
+            <li><a href="logout">Logout</a></li>
+        {% else %}
+            <li><a href="login">Login</a></li>
+        {% endif %}
+        <li><a href="aboutus">About Us</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="register">Register</a></li>
+    </ul>
+    <br>
+    <br>
+    <h1>This is Kiro app index page</h1>
+
+    
+    <a href="aboutus">About us</a>
+    <a href="login">Login</a>
+    <a href="contact">Contact</a>
+    <a href="register">Register</a>
+    <br>
+    <img src="{% static '1143430.jpg' %}" alt="king" height="400" width="500">
+    
+    
+<style>
+    h1{
+        color:blue;
+    }
+</style>
+</body>
+</html>

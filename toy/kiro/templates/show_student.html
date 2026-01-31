@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+    <body>
+        <table>
+            <tr>
+                <td>First Name</td><td>Last Name</td><td>Address</td><td>Pincode</td><td>City</td><td>State</td><td>Father</td><td>Mother</td><td>Phone</td><td>Email</td><td>Adhaar</td><td>Delete</td><td>Edit</td>
+            </tr>
+            {% for i in s %}
+            <tr>
+                <td>{{ i.first_name }}</td>
+                <td>{{ i.last_name }}</td>
+                <td>{{ i.address }}</td>
+                <td>{{ i.pincode }}</td>
+                <td>{{ i.city }}</td>
+                <td>{{ i.state }}</td>
+                <td>{{ i.father_name }}</td>
+                <td>{{ i.mother_name }}</td>
+                <td>{{ i.phno }}</td>
+                <td>{{ i.emailid }}</td>
+                <td>{{ i.adhaar_no }}</td>
+                <td><a href="{% url 'student_delete' i.id %}">Delete</a></td>
+                <td><a href="{% url 'student_edit' i.id %}">Edit</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
